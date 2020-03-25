@@ -1,7 +1,11 @@
-def numTest(x):
-    if x.isdigit():
-        return x
-    else:
-        return "Not a number!"
+def add(a, b):
+    return a + b
+import unittest
 
-numTest("aaa")
+class TestNotebook(unittest.TestCase):
+
+    def test_add(self):
+        self.assertEqual(add(2, 2), 4)
+
+if __name__ == "__main__":
+    unittest.main()
